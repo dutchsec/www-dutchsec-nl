@@ -1,0 +1,74 @@
+// Sticky footer
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: @footer-height;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: @footer-height;
+}
+// Footer styles
+.footer {
+    border-top: 1px solid @brand-gray-lighter;
+    color: @text-muted;
+    > .container {
+        padding: 20px;
+    }
+    .copyright {
+        .text-semibold;
+        @media (max-width: @screen-xs-max) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &.footer-nav {
+            float: right;
+            @media (max-width: @screen-xs-max) {
+                float: none;
+                text-align: center;
+                li {
+                    margin: 0 15px;
+                }
+            }
+            li {
+                margin-left: 30px;
+                a {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: @text-muted;
+                    &:hover {
+                        color: darken(@text-muted, 15%);
+                    }
+                }
+            }
+        }
+        &.social-share {
+            text-align: right;
+            @media (max-width: @screen-xs-max) {
+                margin-top: 20px;
+            }
+            iframe {
+                border: none;
+                overflow: hidden;
+                width: 95px;
+                height: 20px;
+            }
+        }
+    }
+}

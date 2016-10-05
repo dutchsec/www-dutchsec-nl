@@ -1,0 +1,41 @@
+// Bootstrap override
+@font-family-base: 'Source Sans Pro', sans-serif;
+@headings-font-family: 'adelle-regular';
+@headings-font-weight: normal;
+@link-hover-decoration: none;
+@font-size-h1: 44px;
+@font-size-h2: 38px;
+@text-color: #666;
+@hr-border: @brand-orange;
+
+// Use smaller lg width
+@container-large-desktop: 970px;
+
+// Colors
+@brand-orange: #FD5B34;
+@brand-orange-light: #FF7D5E;
+@brand-gray: #838383;
+@brand-gray-light: lighten(@brand-gray, 15%);
+@brand-gray-lighter: lighten(@brand-gray-light, 15%);
+@work-overlay: rgba(55, 48, 43, .7);
+
+// Header
+@header-text-color: #fff;
+@header-muted-color: rgba(255, 255, 255, .8);
+@header-link-color: @header-muted-color;
+// - Dark dark mode
+@header-dark-background-color: #545454;
+@header-dark-text-color: #fff;
+@header-dark-link-color: #DADADA;
+// - Light mode
+@header-light-background-color: #FCFCFC;
+@header-light-text-color: @text-color;
+@header-light-link-color: #828282;
+
+// Footer
+@footer-height: 72px;
+
+// Mixins / Shortcuts
+.text-light { font-weight: 300; }
+.text-semibold { font-weight: 600; }
+.text-bold { font-weight: bold; }

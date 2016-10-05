@@ -1,0 +1,95 @@
+.hero {
+    background-position: center center;
+    background-size: cover;
+    color: @header-text-color;
+    padding-top: 10px;
+    &.hero-dark {
+        background-color: @header-dark-background-color;
+        color: @header-dark-text-color;
+        background-image: url(../img/bg-dark.jpg);
+        a, .nav {
+            color: @header-dark-link-color;
+        }
+        a:hover {
+            color: lighten(@header-dark-link-color, 15%);
+        }
+    }
+    &.hero-light {
+        background-color: @header-light-background-color;
+        color: @header-light-text-color;
+        background-image: url(../img/bg-light.jpg);
+        a, .nav {
+            color: @header-light-link-color;
+        }
+        a:hover {
+            color: darken(@header-light-link-color, 15%);
+        }
+    }
+    .logo {
+        margin: 0 auto;
+        @media (min-width: @screen-sm-min) {
+            max-width: 80px;
+        }
+    }
+    .col-logo {
+        @media (max-width: @screen-xs-max) {
+            padding-right: 0;
+        }
+    }
+    .slug-line {
+        margin-top: -10px;
+        line-height: 1.4;
+        @media (min-width: @screen-lg-min) {
+            line-height: 1.5;
+        }
+    }
+    .header-row {
+        padding: 150px 0;
+    }
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        .slug-line {
+            font-size: 38px;
+        }
+        .header-row {
+            padding: 100px 0;
+        }
+    }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        .slug-line {
+            font-size: 34px;
+        }
+        .header-row {
+            padding: 80px 0;
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        .slug-line {
+            font-size: 26px;
+        }
+        .header-row {
+            padding: 60px 0;
+        }
+    }
+    hr {
+        max-width: 220px;
+        border-top-width: 3px;
+        margin: 60px 0 30px;
+    }
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            &.sep {
+                padding: 0 5px;
+            }
+        }
+    }
+}
